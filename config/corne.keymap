@@ -71,10 +71,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LS(LA(LC(LG(NUMBER_3))))  &kp TAB                 &kp HOME      &kp UP_ARROW  &kp END       &kp PAGE_UP      &kp SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COLON        &kp C_PREVIOUS
-&kp LS(LC(LG(LA(NUMBER_4))))  &kp LS(TAB)             &kp LEFT      &kp DOWN      &kp RIGHT     &kp PAGE_DOWN    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp C_PLAY_PAUSE
-&kp LS(LA(LC(LG(NUMBER_2))))  &kp LA(LC(LG(LS(N5))))  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp DEL          &kp COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp C_NEXT
-                                                                    &trans        &trans        &trans           &trans     &trans           &trans
+&kp LS(LA(LC(LG(NUMBER_3))))  &kp TAB                 &kp HOME      &kp UP_ARROW  &kp END       &kp PAGE_UP      &kp KP_SLASH  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp COLON        &kp C_PREVIOUS
+&kp LS(LC(LG(LA(NUMBER_4))))  &kp LS(TAB)             &kp LEFT      &kp DOWN      &kp RIGHT     &kp PAGE_DOWN    &kp KP_MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &kp C_PLAY_PAUSE
+&kp LS(LA(LC(LG(NUMBER_2))))  &kp LA(LC(LG(LS(N5))))  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp DEL          &kp KP_COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT       &kp C_NEXT
+                                                                    &trans        &trans        &trans           &trans        &trans           &trans
             >;
         };
 
@@ -86,10 +86,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp LG(AT_SIGN)  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN  &kp AMPS         &kp ASTRK      &kp SQT    &kp GRAVE          &trans
-&trans           &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp MINUS    &kp PLUS         &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES  &trans
-&trans           &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH     &kp PIPE     &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp PERIOD         &trans
-                                                       &trans                 &trans           &trans       &trans       &trans           &trans
+&kp LG(AT_SIGN)  &kp CARET       &kp LESS_THAN         &kp GREATER_THAN       &kp DLLR         &kp PRCNT    &kp AT_SIGN    &kp AMPS         &kp ASTRK      &kp SQT    &kp GRAVE          &trans
+&trans           &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp EQUAL    &kp BACKSLASH  &kp KP_PLUS      &kp MINUS      &kp SLASH  &kp DOUBLE_QUOTES  &trans
+&trans           &kp TILDE       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE   &kp HASH     &kp PIPE       &kp EXCLAMATION  &kp SEMICOLON  &kp COLON  &kp KP_DOT         &trans
+                                                       &trans                 &trans           &trans       &trans         &trans           &trans
             >;
         };
 
