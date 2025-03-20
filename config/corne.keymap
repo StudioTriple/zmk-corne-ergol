@@ -17,7 +17,12 @@
 
         Layer3 {
             bindings = <&mo 3>;
-            key-positions = <39>;
+            key-positions = <39 38>;
+        };
+
+        Meh {
+            bindings = <&kt LS(LA(LEFT_GUI))>;
+            key-positions = <37 38>;
         };
     };
 
@@ -43,6 +48,13 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
             tapping-term-ms = <200>;
         };
+
+        shift_tap_dance: shift_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_SHIFT CAPSLOCK>, <&caps_word>;
+        };
     };
 
     keymap {
@@ -50,10 +62,10 @@
 
         Base {
             bindings = <
-&kp ESCAPE  &mt RS(NUMBER_1) Q  &mt NUMBER_2 W       &mt NUMBER_3 E        &mt NUMBER_4 R   &mt N5 T           &mt NUMBER_6 Y       &mt N7 U                     &mt N8 I          &kp O                 &mt N0 P               &kp BSPC
-&kp TAB     &hml LEFT_SHIFT A   &hml LEFT_CONTROL S  &hml LEFT_ALT D       &hml LEFT_GUI F  &kp G              &kp H                &hmr RIGHT_GUI J             &hmr RIGHT_ALT K  &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp ENTER
-&kp ENTER   &kp Z               &kp X                &kp C                 &kp V            &kp B              &kp N                &kp M                        &kp COMMA         &kp DOT               &kp FSLH               &mt RIGHT_SHIFT CAPSLOCK
-                                                     &mt LEFT_COMMAND TAB  &kp SPACE        &lt 1 BACKSPACE    &mt RIGHT_ALT ENTER  &mt RS(RA(RIGHT_GUI)) SPACE  &kp RIGHT_ALT
+&kp ESCAPE        &mt RS(NUMBER_1) Q  &mt NUMBER_2 W       &mt NUMBER_3 E      &mt NUMBER_4 R   &mt N5 T                  &mt NUMBER_6 Y  &mt N7 U             &mt N8 I                   &kp O                 &mt N0 P               &kp BSPC
+&kp TAB           &hml LEFT_SHIFT A   &hml LEFT_CONTROL S  &hml LEFT_ALT D     &hml LEFT_GUI F  &kp G                     &kp H           &hmr RIGHT_GUI J     &hmr RIGHT_ALT K           &hmr RIGHT_CONTROL L  &hmr RIGHT_SHIFT SEMI  &kp ENTER
+&shift_tap_dance  &kp Z               &kp X                &kp C               &kp V            &kp B                     &kp N           &kp M                &kp COMMA                  &kp DOT               &kp FSLH               &shift_tap_dance
+                                                           &mt LEFT_SHIFT RET  &kp SPACE        &mt LEFT_GUI BACKSPACE    &lt 1 ENTER     &mt RIGHT_ALT SPACE  &kp RC(RA(RS(RIGHT_GUI)))
             >;
         };
 
@@ -81,6 +93,15 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bl BL_TOG         &bl BL_INC  &bl BL_DEC   &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD
 &none       &none         &none         &none         &none         &none           &none              &none       &none        &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &none
                                         &none         &none         &none           &none              &none       &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
